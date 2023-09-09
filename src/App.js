@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+// npm install @auth0/auth0-react
+// npm install bootstrap
+// https://www.geeksforgeeks.org/how-to-build-a-react-app-with-user-authentication/
 import './App.css';
+import LoginButton from './components/LoginButton';
+import LogoutButton from './components/LogoutButton';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<nav className="navbar bg-dark">
+				<div className="container-fluid">
+					<span className="appName">
+						React User Authentication</span>
+				</div>
+			</nav>
+			<LoginButton />
+			<LogoutButton />
+		</>
+	);
 }
 
 export default App;
